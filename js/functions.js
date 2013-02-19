@@ -1,7 +1,7 @@
 function checkRequirements()
 {
 	navigator.notification.alert(
-			navigator.network.connection.type,
+			navigator.connection.type,
 			function(){},
 			'Warning'
 	);
