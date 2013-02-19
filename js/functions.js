@@ -1,6 +1,10 @@
 function checkRequirements()
 {
-//	alert(navigator.network.connection.type);
+	navigator.notification.alert(
+			navigator.network.connection.type,
+			function(){},
+			'Warning'
+	);
 	if (navigator.connection.type == Connection.NONE)
 	{
 		navigator.notification.alert(
@@ -46,12 +50,6 @@ function urlParam(name)
  */
 function initApplication()
 {
-//	alert('init');
-	navigator.notification.alert(
-			'init',
-			function(){},
-			'Ok'
-	);
 	$('#set-car-position, #find-car').click(function() {
 		if (checkRequirements() === false)
 		{
