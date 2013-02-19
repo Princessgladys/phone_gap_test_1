@@ -1,10 +1,5 @@
 function checkRequirements()
 {
-	navigator.notification.alert(
-			navigator.connection.type,
-			function(){},
-			'Warning'
-	);
 	if (navigator.connection.type == Connection.NONE)
 	{
 		navigator.notification.alert(
